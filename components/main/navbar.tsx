@@ -20,12 +20,12 @@ export const Navbar = () => {
           <Image
             src="/logo.png"
             alt="Logo"
-            width={70}
-            height={70}
+            width={170}
+            height={170}
             draggable={false}
             className="cursor-pointer"
           />
-          <div className="hidden md:flex md:selffont-bold ml-[10px] text-gray-300">John Doe</div>
+          <div className="hidden md:flex md:selffont-bold ml-[10px] text-gray-300"></div>
         </Link>
 
         {/* Web Navbar */}
@@ -48,7 +48,7 @@ export const Navbar = () => {
               rel="noreferrer noopener"
               className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
             >
-              Source Code
+
             </Link>
           </div>
         </div>
