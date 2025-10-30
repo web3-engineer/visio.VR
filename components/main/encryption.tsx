@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 import { slideInFromTop } from "@/lib/motion";
+import visiovrlogo from "@/app/visiovrlogo.png";
 
 export const Encryption = () => {
   return (
@@ -11,36 +12,41 @@ export const Encryption = () => {
       <div className="absolute w-auto h-auto top-0 z-[5]">
         <motion.div
           variants={slideInFromTop}
-          className="text-[40px] font-medium text-center text-gray-200"
+          animate={{
+            y: [0, -10, 0],
+            opacity: [1, 0.8, 1]
+          }}
+          transition={{
+            duration: 4,
+            ease: "easeInOut",
+            repeat: Infinity
+          }}
+          className="text-[40px] font-medium text-center text-gray-200 select-none"
         >
-          Performance{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+          Mundos sob medida{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 animate-pulse">
             &
           </span>{" "}
-          security.
+          feitos para você.
         </motion.div>
       </div>
 
-      <div className="flex flex-col items-center justify-center translate-y-[-50px] absolute z-[20] w-auto h-auto">
+      <div className="flex flex-col items-center justify-center absolute z-[20] w-auto h-auto top-1/2 -translate-y-1/2">
         <div className="flex flex-col items-center group cursor-pointer w-auto h-auto">
+
           <Image
-            src="/lock-top.png"
-            alt="Lock top"
-            width={50}
-            height={50}
-            className="translate-y-5 transition-all duration-200 group-hover:translate-y-11"
-          />
-          <Image
-            src="/lock-main.png"
+            src={visiovrlogo}
             alt="Lock main"
-            width={70}
-            height={70}
-            className="z-10"
+            width={120}
+            height={120}
+            className="z-60 relative drop-shadow-[0_0_25px_rgba(112,66,248,0.8)] hover:scale-105 transition-transform duration-500 ease-in-out"
+            priority
           />
         </div>
 
         <div className="Welcome-box px-[15px] py-[4px] z-[20] border my-[20px] border-[#7042F88B] opacity-[0.9]">
-          <h1 className="Welcome-text text-[12px]">Encryption</h1>
+          <h1 className="Welcome-text text-[12px]">A Vision é uma Startup focada em oferecer tecnologia de ponta por um preço acessivel.
+          Nosso objetivo é blalblalblalblalb </h1>
         </div>
       </div>
 
