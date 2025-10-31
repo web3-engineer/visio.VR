@@ -2,6 +2,7 @@
 
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
+import Link from 'next/link';
 
 import {
   slideInFromLeft,
@@ -60,11 +61,11 @@ export const HeroContent = () => {
               className="bg-clip-text text-transparent"
               style={{
                 backgroundImage:
-                  "linear-gradient(90deg, rgba(59,130,246,0.25), rgba(96,165,250,1), rgba(59,130,246,0.25))",
-                backgroundSize: "200% 100%",
+                  "linear-gradient(90deg, #3b82f6, #9333ea, #ec4899, #3b82f6)",
+                backgroundSize: "300% 100%",
               }}
-              animate={{ backgroundPosition: ["-200% 0%", "200% 0%"] }}
-              transition={{ duration: 3.2, repeat: Infinity, ease: "linear" }}
+              animate={{ backgroundPosition: ["0% 0%", "100% 0%", "0% 0%"] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             >
               Expanda os horizontes da sua empresa.
             </motion.span>
@@ -77,23 +78,24 @@ export const HeroContent = () => {
             Conheça a startup pioneira de realidade virtual no Ceará.
           </motion.p>
 
-          <motion.a
-            variants={slideInFromLeft(1)}
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            whileHover={{
-              scale: 1.06,
-              boxShadow: "0 0 35px rgba(112,66,248,0.9)",
-              background:
-                "linear-gradient(90deg, rgba(90,40,255,1) 0%, rgba(0,212,255,1) 100%)",
-            }}
-            whileTap={{ scale: 0.94 }}
-            className="mt-8 ml-0 py-3 px-8 text-lg font-semibold tracking-wide text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 rounded-full shadow-[0_0_30px_rgba(112,66,248,0.5)] transition-all duration-500 ease-out hover:shadow-[0_0_45px_rgba(112,66,248,0.8)] cursor-pointer"
-            aria-label="Saiba Mais sobre a VisioVR"
-          >
-            Saiba Mais
-          </motion.a>
+          <Link href="#projects-end" scroll={true}>
+            <motion.div
+              variants={slideInFromLeft(1)}
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              whileHover={{
+                scale: 1.06,
+                boxShadow: '0 0 35px rgba(112,66,248,0.9)',
+                background: 'linear-gradient(90deg, rgba(90,40,255,1) 0%, rgba(0,212,255,1) 100%)',
+              }}
+              whileTap={{ scale: 0.94 }}
+              className="mt-8 ml-0 py-3 px-8 text-lg font-semibold tracking-wide text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 rounded-full shadow-[0_0_30px_rgba(112,66,248,0.5)] transition-all duration-500 ease-out hover:shadow-[0_0_45px_rgba(112,66,248,0.8)] cursor-pointer"
+              aria-label="Ir para a seção de projetos"
+            >
+              Saiba Mais
+            </motion.div>
+          </Link>
         </motion.div>
       </div>
   );

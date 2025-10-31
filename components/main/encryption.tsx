@@ -8,7 +8,7 @@ import visiovrlogo from "@/app/visiovrlogo.png";
 
 export const Encryption = () => {
   return (
-    <div className="flex flex-row relative items-center justify-center min-h-screen w-full h-full -z-20">
+    <section id="about-us" className="flex flex-row relative items-center justify-center min-h-screen w-full h-full -z-20">
       <div className="absolute w-auto h-auto top-0 z-[5]">
         <motion.div
           variants={slideInFromTop}
@@ -64,6 +64,6 @@ export const Encryption = () => {
           <source src="/videos/encryption-bg.webm" type="video/webm" />
         </video>
       </div>
-    </div>
+    </section>
   );
 };

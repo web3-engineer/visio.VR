@@ -52,7 +52,7 @@ export const Footer = () => {
         </div>
 
         <div className="mb-[20px] text-[15px] text-center">
-          &copy; {new Date().getFullYear()} Inc. All rights reserved.
+          &copy; {new Date().getFullYear()}
         </div>
       </div>
     </div>
