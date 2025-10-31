@@ -14,20 +14,21 @@ export const Encryption = () => {
           variants={slideInFromTop}
           animate={{
             y: [0, -10, 0],
-            opacity: [1, 0.8, 1]
+            opacity: [1, 0.8, 1],
+            backgroundImage: [
+              "linear-gradient(90deg, rgba(59,130,246,1), rgba(96,165,250,1), rgba(59,130,246,1))",
+              "linear-gradient(90deg, rgba(147,51,234,1), rgba(232,121,249,1), rgba(147,51,234,1))",
+              "linear-gradient(90deg, rgba(59,130,246,1), rgba(96,165,250,1), rgba(59,130,246,1))"
+            ]
           }}
           transition={{
-            duration: 4,
+            duration: 6,
             ease: "easeInOut",
             repeat: Infinity
           }}
-          className="text-[40px] font-medium text-center text-gray-200 select-none"
+          className="text-[48px] sm:text-[56px] font-light tracking-tight leading-tight text-center text-transparent bg-clip-text select-none bg-gradient-to-r from-blue-400 via-sky-500 to-cyan-400"
         >
-          Mundos sob medida{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 animate-pulse">
-            &
-          </span>{" "}
-          feitos para você.
+          Mundos sob medida feitos para você.
         </motion.div>
       </div>
 

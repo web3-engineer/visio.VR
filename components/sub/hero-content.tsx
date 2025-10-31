@@ -60,7 +60,7 @@ export const HeroContent = () => {
               className="bg-clip-text text-transparent"
               style={{
                 backgroundImage:
-                  "linear-gradient(90deg, rgba(147,51,234,0.25), rgba(168,85,247,1), rgba(147,51,234,0.25))",
+                  "linear-gradient(90deg, rgba(59,130,246,0.25), rgba(96,165,250,1), rgba(59,130,246,0.25))",
                 backgroundSize: "200% 100%",
               }}
               animate={{ backgroundPosition: ["-200% 0%", "200% 0%"] }}

@@ -140,7 +140,7 @@ function NebulaLayer({
 }
 
 /* =================== DUST OVERLAY (frente) =================== */
-function DustOverlay({ z = -1.23, strength = 0.35 }) {
+function DustOverlay({ z = -1.23, strength = 0.35 }: { z?: number; strength?: number }) {
     const material = useMemo(
         () =>
             new THREE.ShaderMaterial({
