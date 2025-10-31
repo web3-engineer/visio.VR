@@ -31,30 +31,25 @@ export const Encryption = () => {
         </motion.div>
       </div>
 
-      <div className="flex flex-col items-center justify-center absolute z-[20] w-auto h-auto top-1/2 -translate-y-1/2">
+      <div className="flex flex-col items-center justify-center absolute z-[20] w-auto h-auto top-[58%] sm:top-[60%] md:top-[62%] lg:top-[62%] -translate-y-1/2">
         <div className="flex flex-col items-center group cursor-pointer w-auto h-auto">
 
           <Image
             src={visiovrlogo}
-            alt="Lock main"
-            width={120}
-            height={120}
-            className="z-60 relative drop-shadow-[0_0_25px_rgba(112,66,248,0.8)] hover:scale-105 transition-transform duration-500 ease-in-out"
+            alt="VisioVR Logo"
+            width={160}
+            height={160}
+            className="z-60 relative drop-shadow-[0_0_35px_rgba(112,66,248,0.9)] hover:scale-110 transition-transform duration-700 ease-in-out"
             priority
           />
         </div>
 
-        <div className="Welcome-box px-[15px] py-[4px] z-[20] border my-[20px] border-[#7042F88B] opacity-[0.9]">
-          <h1 className="Welcome-text text-[12px]">A Vision é uma Startup focada em oferecer tecnologia de ponta por um preço acessivel.
-          Nosso objetivo é blalblalblalblalb </h1>
+        <div className="Welcome-box px-[15px] py-[4px] z-[20] border mt-[160px] border-[#7042F88B] opacity-[0.9]">
+          <h1 className="text-[18px] leading-relaxed text-gray-200 text-center max-w-[700px]">A Vision VR é uma Startup focada em oferecer tecnologia de ponta por um preço acessivel.
+          Através de avançados algoritmos de IA e mãos habilidosas, entregamos mundos e experiências imersivas para empresas e instituições.</h1>
         </div>
       </div>
 
-      <div className="absolute z-[20] bottom-[10px] px-[5px]">
-        <div className="cursive text-[20px] font-medium text-center text-gray-300">
-          Secure your data with end-to-end encryption.
-        </div>
-      </div>
 
       <div className="w-full flex items-start justify-center absolute">
         <video

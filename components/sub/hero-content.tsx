@@ -45,19 +45,30 @@ export const HeroContent = () => {
             </h1>
           </motion.div>
 
-          <motion.div
-              variants={slideInFromLeft(0.5)}
-              className="flex flex-col gap-6 mt-6 text-6xl font-bold max-w-[600px]"
+          <motion.h1
+            variants={slideInFromLeft(0.5)}
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0, textShadow: [
+              "0 0 0px rgba(0,255,255,0.0)",
+              "0 0 8px rgba(34,211,238,0.35)",
+              "0 0 0px rgba(0,255,255,0.0)"
+            ] }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            className="mt-6 text-5xl sm:text-6xl font-light tracking-tight leading-tight max-w-[700px] select-none"
           >
-          <span>
-            Expanda{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              os
-              horizontes
-            </span>{" "}
-            da sua empresa.
-          </span>
-          </motion.div>
+            <motion.span
+              className="bg-clip-text text-transparent"
+              style={{
+                backgroundImage:
+                  "linear-gradient(90deg, rgba(147,51,234,0.25), rgba(168,85,247,1), rgba(147,51,234,0.25))",
+                backgroundSize: "200% 100%",
+              }}
+              animate={{ backgroundPosition: ["-200% 0%", "200% 0%"] }}
+              transition={{ duration: 3.2, repeat: Infinity, ease: "linear" }}
+            >
+              Expanda os horizontes da sua empresa.
+            </motion.span>
+          </motion.h1>
 
           <motion.p
               variants={slideInFromLeft(0.8)}
@@ -66,45 +77,23 @@ export const HeroContent = () => {
             Conheça a startup pioneira de realidade virtual no Ceará.
           </motion.p>
 
-          <div className="relative mt-4 w-[240px] h-[120px] pointer-events-none select-none">
-            {/* Partículas decorativas */}
-            {PARTICLES.map((p, i) => (
-              <motion.span
-                key={i}
-                initial={{ opacity: 0, scale: 0.6, y: 6 }}
-                animate={{ opacity: [0.2, 0.9, 0.4, 0.9], y: [6, -6, 6] }}
-                transition={{ duration: 3.2, delay: p.d, repeat: Infinity, ease: "easeInOut" }}
-                style={{ left: p.x, top: p.y }}
-                className="absolute w-2 h-2 rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 blur-[1px] shadow-[0_0_12px_rgba(112,66,248,0.7)]"
-              />
-            ))}
-
-            {/* Anel externo brilhante */}
-            <motion.div
-              aria-hidden
-              initial={{ opacity: 0 }}
-              animate={{ opacity: [0, 0.6, 0.2, 0.6] }}
-              transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-600/10 via-indigo-600/10 to-cyan-500/10 blur-xl"
-            />
-
-            {/* Botão */}
-            <motion.a
-              variants={slideInFromLeft(1)}
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.55, delay: 0.55, ease: 'easeOut' }}
-              whileHover={{ scale: 1.08, boxShadow: "0 0 20px rgba(112,66,248,0.8)" }}
-              whileTap={{ scale: 0.96 }}
-              className="pointer-events-auto absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 relative py-3 px-6 text-center font-semibold text-white rounded-lg bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 cursor-pointer overflow-hidden max-w-[220px]"
-              aria-label="Saiba Mais sobre a VisioVR"
-            >
-              <span className="relative z-10">Saiba Mais</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 opacity-0 hover:opacity-40 blur-md transition-opacity duration-300"></div>
-              {/* brilho central sutil */}
-              <div className="pointer-events-none absolute -inset-8 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.35),transparent_60%)]" />
-            </motion.a>
-          </div>
+          <motion.a
+            variants={slideInFromLeft(1)}
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            whileHover={{
+              scale: 1.06,
+              boxShadow: "0 0 35px rgba(112,66,248,0.9)",
+              background:
+                "linear-gradient(90deg, rgba(90,40,255,1) 0%, rgba(0,212,255,1) 100%)",
+            }}
+            whileTap={{ scale: 0.94 }}
+            className="mt-8 ml-0 py-3 px-8 text-lg font-semibold tracking-wide text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 rounded-full shadow-[0_0_30px_rgba(112,66,248,0.5)] transition-all duration-500 ease-out hover:shadow-[0_0_45px_rgba(112,66,248,0.8)] cursor-pointer"
+            aria-label="Saiba Mais sobre a VisioVR"
+          >
+            Saiba Mais
+          </motion.a>
         </motion.div>
       </div>
   );
